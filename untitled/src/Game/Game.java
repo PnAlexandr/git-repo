@@ -17,7 +17,7 @@ public class Game {
             int number = (int) (Math.random() * range);
             while (true) {
                 System.out.println("В dеди число от 0 до" + range);
-                {
+               try {
                     int inputNamber = scanner.nextInt();
                     if (inputNamber == number) {
                         System.out.println("Выугодали");
@@ -27,28 +27,14 @@ public class Game {
                     } else {
                         System.out.println("Вы проиграли заданное  число Меньше");
                     }
-                }
+                } catch (InputMismatchException e){
+                   System.out.println("В води только цифры");
+                   break;
+               }
             }
         }
-//        while (true) {
-//            System.out.println("В dеди число от 0 до" + range);
-//            try {
-//                int inputNamber = scanner.nextInt();
-//
-//                if (inputNamber == number) {
-//                    System.out.println("Выугодали");
-//                    break;
-//                } else if (inputNamber < number) {
-//                    System.out.println("Вы проиграли заданное  число больше");
-//                } else {
-//                    System.out.println("Вы проиграли заданное  число Меньше");
-//                }
-//            } catch (InputMismatchException e) {
-//                System.out.println("ВВоди только цыфры");
-//                break;
-//            }
-//        }
-    }
+}
+
 
 
 
